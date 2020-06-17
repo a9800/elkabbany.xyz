@@ -3,7 +3,9 @@
 :root {
     --main-blue-color: #000739;
     --green-highlight-color: #69F3D0;
-    --main-white-color: #f8f8ff;
+    --main-white-color: #f3f3f3;
+    --header-text-color: #2f2f2f;
+    --footer-text-color: #2f2f2f;
 }
 
 
@@ -29,29 +31,34 @@ footer > * {
 }
    
 header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  z-index: 99999;
-  transform: scaleX(0);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 99999;
+    transform: scaleX(0); 
 }
  
+h1{
+    color: var(--header-text-color);
+    font-weight: 200;
+}
+
 .text-wrapper{
-  margin-top: 10px;
+    margin-top: 10px;
 }
  
 main .text-wrapper * {
-  transform: translateY(200%);
-  overflow: unset;
-  animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
+    transform: translateY(200%);
+    overflow: unset;
+    animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
 }
  
 main .p-wrapper * {
-  transform: translateY(-200%);
-  overflow: unset;
+    transform: translateY(-200%);
+    overflow: unset;
 }
 
 html{
@@ -90,7 +97,7 @@ main{
 .page-footer{
     padding:1rem;
     text-align:center;
-    color:#2f2f2f;
+    color:var(--header-text-color);
     animation: fadeIn 0.5s ease-in 0.7s forwards;
 }
 
@@ -128,7 +135,8 @@ a:hover{
     padding:.5em;
     margin:3px;
     font-size:1.4rem;
-    color: black;
+    font-weight: 200;
+    color: var(--header-text-color);
     animation: fadeIn 0.5s ease-in 0.7s;
 }
 
