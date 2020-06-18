@@ -65,6 +65,7 @@ nav > * {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    height: 20px;
 }
 .hvr-sweep-to-top:before {
     content: "";
