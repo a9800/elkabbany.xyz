@@ -22,8 +22,73 @@ main .text-wrapper {
     overflow: hidden;
 }
 
-header nav > * {
+nav > * {
     transform: translateY(-30px);
+}
+
+.nav{
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:3px;
+    animation: fadeIn 0.5s ease-in 0.7s forwards;
+    margin-bottom: -6px;
+}
+
+.nav-item{
+    text-decoration:none;
+    font-weight:700;
+    padding:.5em;
+    margin:3px;
+    font-size:1.4rem;
+    font-weight: 200;
+    color: var(--header-text-color);
+    animation: fadeIn 0.5s ease-in 0.7s;
+}
+
+.active{
+    background-color: var(--green-highlight-color);
+}
+
+.nav-item:hover{
+    text-decoration: none;
+}
+
+/* Sweep To Top */
+.hvr-sweep-to-top, .nav-item {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-sweep-to-top:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--green-highlight-color);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
 }
    
 footer > * {
@@ -122,34 +187,6 @@ a:hover{
     text-decoration: underline;
 }
 
-.nav{
-    overflow:hidden;
-    text-align:center;
-    padding-bottom:3px;
-    animation: fadeIn 0.5s ease-in 0.7s forwards;
-}
-
-.nav-item{
-    text-decoration:none;
-    font-weight:700;
-    padding:.5em;
-    margin:3px;
-    font-size:1.4rem;
-    font-weight: 200;
-    color: var(--header-text-color);
-    animation: fadeIn 0.5s ease-in 0.7s;
-}
-
-.active{
-    background-color: var(--green-highlight-color);
-}
-
-.nav-item:hover{
-    text-decoration: none;
-    transform-origin: bottom;
-    animation: slideUp 0.5s;
-    background-color: var(--green-highlight-color);
-}
 
 .pic-me{
     width:200px;
@@ -193,3 +230,5 @@ a:hover{
     0%   { transform: translateY(0); }
     100% { transform: translateY(1); }
 }
+
+
