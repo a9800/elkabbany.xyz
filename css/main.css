@@ -2,8 +2,8 @@
 
 :root {
     --main-blue-color: #000739;
-    --green-highlight-color: #69F3D0;
-    --main-white-color: #f3f3f3;
+    --green-highlight-color: #ecd444;
+    --main-white-color: #e8f0ff;
     --header-text-color: #2f2f2f;
     --footer-text-color: #2f2f2f;
 }
@@ -174,7 +174,7 @@ main{
 .load-bar{
     margin:  0;
     padding: 0;
-    background-color:#69F3D0;
+    background-color:var(--green-highlight-color);
     height: 5px;
     animation: scaleIn 1s ease-in;
 }
