@@ -4,8 +4,8 @@
     --main-blue-color: #000739;
     --green-highlight-color: #ecd444;
     --main-white-color: #e8f0ff;
-    --header-text-color: #2f2f2f;
-    --footer-text-color: #2f2f2f;
+    --header-text-color: #000739;
+    --footer-text-color: #000739;
 }
 
 
@@ -156,7 +156,7 @@ main{
     background-color: var(--main-blue-color);
     min-height: 32em; 
     margin-top: 0px;
-    color: #cfcfcf;
+    color: #e8f0ff;
     animation: fadeIn 1s ease-in 0.7s forwards;
 }
 
@@ -175,13 +175,14 @@ main{
     margin:  0;
     padding: 0;
     background-color:var(--green-highlight-color);
-    height: 5px;
+    height: 6px;
     animation: scaleIn 1s ease-in;
 }
 
 a{ 
     text-decoration:none;
     color: var(--green-highlight-color);
+    font-weight: bolder;
 }
 
 a:hover{
@@ -193,7 +194,7 @@ a:hover{
     width:200px;
     float: left;
     margin:20px;
-    border: 2px solid var(--green-highlight-color);
+    border: 3px solid var(--green-highlight-color);
 }
 
 @media (max-width: 700px) { 
